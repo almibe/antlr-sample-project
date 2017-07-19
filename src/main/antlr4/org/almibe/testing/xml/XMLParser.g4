@@ -27,10 +27,6 @@
 /** XML parser derived from ANTLR v4 ref guide book example */
 parser grammar XMLParser;
 
-@header {
-package org.almibe.testing.xml
-}
-
 options { tokenVocab=XMLLexer; }
 
 document    :   prolog? misc* element misc*;
