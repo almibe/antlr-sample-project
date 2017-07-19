@@ -4,7 +4,7 @@
   <groupId>org.almibe</groupId>
   <artifactId>antlr-testing-project</artifactId>
   <version>0.1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
   <name>ANTLR Test Grammar</name>
   <build>
     <plugins>
@@ -22,6 +22,16 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>org.almibe.testing.*</Export-Package>
+          </instructions>
+        </configuration>
       </plugin>
     </plugins>
   </build>
